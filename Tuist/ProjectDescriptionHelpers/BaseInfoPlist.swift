@@ -5,7 +5,7 @@ public extension Project {
         "CFBundleShortVersionString": "1.0.0",
         "CFBundleVersion": "1",
         "CFBundleIdentifier": "com.Today-iOS.release",
-        "CFBundleDisplayName": "APP",
+        "CFBundleDisplayName": "Today",
         "UILaunchStoryboardName": "LaunchScreen",
         "UIApplicationSceneManifest": [
             "UIApplicationSupportsMultipleScenes": false,
