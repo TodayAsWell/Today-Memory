@@ -13,8 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         self.window = window
-        let appFlow = AppFlow(window: window)
-        self.coordinator.coordinate(flow: appFlow, with: AppStepper())
+//        let appFlow = AppFlow(window: window)
+//        self.coordinator.coordinate(flow: appFlow, with: AppStepper())
         window.makeKeyAndVisible()
         
     }

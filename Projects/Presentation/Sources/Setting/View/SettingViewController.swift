@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import TodayKit
 
 // ViewController (View)
 class SettingViewController: UIViewController, SettingViewInterface {
@@ -37,7 +38,7 @@ class SettingViewController: UIViewController, SettingViewInterface {
         
         setupConstraints()
         
-        tableView.backgroundColor = .F6F6F8
+        tableView.backgroundColor = TodayKitAsset.Colors.f6F6F8.color
         
         tableView.rowHeight = 60.0
     }
@@ -85,7 +86,7 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
 
         if indexPath.section == 0 {
             let switchView = UISwitch()
-            switchView.onTintColor = .BAA7E7
+            switchView.onTintColor = TodayKitAsset.Colors.baa7E7.color
             cell.accessoryView = switchView
         } else if indexPath.section == 1 {
             cell.accessoryType = .disclosureIndicator
