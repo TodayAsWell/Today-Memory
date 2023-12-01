@@ -14,4 +14,5 @@ public extension TargetDependency.SPM {
     static let Quick = TargetDependency.external(name: "Quick")
     static let SnapKit = TargetDependency.external(name: "SnapKit")
     static let RxFlow = TargetDependency.external(name: "RxFlow")
+    static let XCameraKit = TargetDependency.external(name: "XCameraKit")
 }
