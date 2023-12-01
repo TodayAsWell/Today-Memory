@@ -9,6 +9,7 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import XCameraKit
 
 open class BaseViewController<T>: UIViewController {
     public let viewModel: T
