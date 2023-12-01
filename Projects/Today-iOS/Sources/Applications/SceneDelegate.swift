@@ -1,7 +1,7 @@
 import UIKit
 import Presentation
 import RxFlow
-import APPNavigator
+import TodayNavigator
 import Core
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
