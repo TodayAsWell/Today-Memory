@@ -7,6 +7,6 @@ let project = Project.makeModule(
     product: .staticFramework,
     dependencies: [
         .Project.ThridPartyLib,
-        .Project.APPLogger
+        .Project.TodayLogger
     ]
 )

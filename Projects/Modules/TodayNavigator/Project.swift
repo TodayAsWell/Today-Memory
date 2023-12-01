@@ -5,7 +5,6 @@ let project = Project.makeModule(
     name: "TodayNavigator",
     product: .staticFramework,
     dependencies: [
-        .Project.Presentation,
-        .Project.Data
+        .Project.Presentation
     ]
 )

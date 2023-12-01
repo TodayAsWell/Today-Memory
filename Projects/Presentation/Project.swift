@@ -5,8 +5,7 @@ let project = Project.makeModule(
     name: "Presentation",
     product: .staticFramework,
     dependencies: [
-        .Project.APPKit,
-        .Project.Domain
+        .Project.APPKit
     ],
     hasTest: true
 )
