@@ -12,6 +12,7 @@ let project = Project.makeModule(
         .external(name: "SnapKit"),
         .external(name: "Lottie"),
         .external(name: "RxFlow"),
-        .external(name: "XCameraKit")
+        .external(name: "XCameraKit"),
+        .external(name: "Then")
     ]
 )
