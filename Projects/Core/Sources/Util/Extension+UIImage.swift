@@ -1,13 +1,6 @@
-//
-//  UIImage+Extension.swift
-//  Today_Memory_iOS
-//
-//  Created by 박준하 on 2023/06/15.
-//
-
 import UIKit
 
-extension UIImage {
+public extension UIImage {
     
     // 비트맵으로 변환하는 함수
     // 색상과 크기를 요청하고 UIImage를 반환합니다.

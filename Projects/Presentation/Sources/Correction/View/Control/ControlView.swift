@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 import Then
 import SnapKit
+import TodayKit
 
 class ControlView: UIView {
     
@@ -26,7 +27,7 @@ class ControlView: UIView {
     
     var mainTitle = UILabel().then {
         $0.text = "글자"
-        $0.textColor = .BAA7E7
+        $0.textColor = TodayKitAsset.Colors.baa7E7.color
         $0.font = .systemFont(ofSize: 20.0, weight: .semibold)
     }
     

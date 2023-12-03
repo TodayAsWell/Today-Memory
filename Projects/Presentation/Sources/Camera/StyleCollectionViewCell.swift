@@ -3,7 +3,7 @@ import RxSwift
 import RxCocoa
 import Then
 import SnapKit
-import SnapKit
+import TodayKit
 
 class StyleCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
@@ -12,7 +12,7 @@ class StyleCollectionViewCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10.0
         imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.EAEAFC.cgColor
+        imageView.layer.borderColor = TodayKitAsset.Colors.eaeafc.color.cgColor
         return imageView
     }()
     
@@ -29,7 +29,7 @@ class StyleCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         imageView.layer.borderWidth = 2
-        imageView.layer.borderColor = UIColor.EAEAFC.cgColor
+        imageView.layer.borderColor = TodayKitAsset.Colors.eaeafc.color.cgColor
     }
     
     override var isSelected: Bool {
@@ -49,7 +49,7 @@ class StyleCollectionViewCell: UICollectionViewCell {
     
     private func updateSelectionStyle() {
         let borderWidth: CGFloat = isSelected ? 4 : 0
-        let borderColor: UIColor = isSelected ? .BAA7E7 : .EAEAFC
+        let borderColor: UIColor = isSelected ? TodayKitAsset.Colors.baa7E7.color : TodayKitAsset.Colors.eaeafc.color
         imageView.layer.borderWidth = borderWidth
         imageView.layer.borderColor = borderColor.cgColor
     }

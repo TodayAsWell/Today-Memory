@@ -1,6 +1,7 @@
 import UIKit
 import SnapKit
 import Then
+import TodayKit
 
 class MultipleFrameViewController: UIViewController {
     
@@ -43,8 +44,8 @@ extension MultipleFrameViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FrameSelectCollectionViewCell.id, for: indexPath) as! FrameSelectCollectionViewCell
         
         cell.imageView.layer.borderWidth = 2
-        cell.imageView.layer.borderColor = UIColor.EAEAFC.cgColor
-        cell.imageView.backgroundColor = .EEEEF0
+        cell.imageView.layer.borderColor = TodayKitAsset.Colors.eaeafc.color.cgColor
+        cell.imageView.backgroundColor = TodayKitAsset.Colors.eeeef0.color
         switch indexPath.row {
         case 0:
             cell.mainImage.image = UIImage(named: "Base4Frame")
@@ -72,7 +73,7 @@ extension MultipleFrameViewController: UICollectionViewDelegate, UICollectionVie
             cell.titleLabel.text = "Nature Day"
             
         default:
-            cell.imageView.backgroundColor = .EEEEF0
+            cell.imageView.backgroundColor = TodayKitAsset.Colors.eeeef0.color
         }
         
         return cell

@@ -1,14 +1,7 @@
-//
-//  SegmentedControl+Extension.swift
-//  Today_Memory_iOS
-//
-//  Created by 박준하 on 2023/06/26.
-//
-
 import Foundation
 import UIKit
 
-extension UISegmentedControl {
+public extension UISegmentedControl {
     
     //바탕지우는 코드
     func removeBorder(){

@@ -7,22 +7,18 @@ import Core
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    var coordinator = FlowCoordinator()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        let window = UIWindow(windowScene: windowScene)
-        self.window = window
-//        let appFlow = AppFlow(window: window)
-//        self.coordinator.coordinate(flow: appFlow, with: AppStepper())
-        window.makeKeyAndVisible()
         
-    }
+        let mainViewController = ViewController()
+        
+        let navigationController = UINavigationController(rootViewController: mainViewController)
 
-    func sceneDidDisconnect(_ scene: UIScene) {}
-
-    func sceneDidBecomeActive(_ scene: UIScene) {
-        UIApplication.shared.applicationIconBadgeNumber = 0
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        window?.windowScene = windowScene
     }
 
     func sceneWillResignActive(_ scene: UIScene) {}

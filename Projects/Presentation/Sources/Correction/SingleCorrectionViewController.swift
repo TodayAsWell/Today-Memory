@@ -3,6 +3,8 @@ import SnapKit
 import Then
 import RxCocoa
 import RxSwift
+import Core
+import TodayKit
 
 class SingleCorrectionViewController: UIViewController, SendDataDelegate, UIGestureRecognizerDelegate, UIViewControllerTransitioningDelegate, UIPopoverPresentationControllerDelegate, UITextFieldDelegate {
 
@@ -214,7 +216,7 @@ class SingleCorrectionViewController: UIViewController, SendDataDelegate, UIGest
         frameView.delegate = self
         stickerView.delegate = self
             
-        view.backgroundColor = .F6F6F8
+        view.backgroundColor = TodayKitAsset.Colors.f6F6F8.color
     }
     
     func setupButton() {
@@ -275,7 +277,7 @@ class SingleCorrectionViewController: UIViewController, SendDataDelegate, UIGest
     func setupNavigationItem() {
         title = "보정"
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "checkmark"))
-        navigationItem.rightBarButtonItem?.tintColor = UIColor.BAA7E7
+        navigationItem.rightBarButtonItem?.tintColor = TodayKitAsset.Colors.baa7E7.color
         
         navigationItem.rightBarButtonItem?.rx.tap
             .subscribe(onNext: {

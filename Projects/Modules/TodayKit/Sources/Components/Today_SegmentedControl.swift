@@ -1,17 +1,10 @@
-//
-//  CustomSegmentedControl.swift
-//  Today_Memory_iOS
-//
-//  Created by 박준하 on 2023/06/26.
-//
-
 import UIKit
 
-protocol CustomSegmentedControlDelegate: AnyObject {
+protocol TodaySegmentedControlDelegate: AnyObject {
     func change(to index:Int)
 }
 
-class CustomSegmentedControl: UIView {
+open class TodaySegmentedControl: UIView {
     private var buttonTitles:[String]!
     private var buttons: [UIButton]!
     private var selectorView: UIView!
@@ -20,7 +13,7 @@ class CustomSegmentedControl: UIView {
     var selectorViewColor: UIColor = .red
     var selectorTextColor: UIColor = .red
     
-    weak var delegate: CustomSegmentedControlDelegate?
+    weak var delegate: TodaySegmentedControlDelegate?
     
     public private(set) var selectedIndex : Int = 0
     
@@ -36,7 +29,7 @@ class CustomSegmentedControl: UIView {
         self.buttonTitles = buttonTitle
     }
     
-    override func draw(_ rect: CGRect) {
+    open override func draw(_ rect: CGRect) {
         super.draw(rect)
         self.backgroundColor = UIColor.white
         updateView()
@@ -75,7 +68,7 @@ class CustomSegmentedControl: UIView {
 }
 
 //Configuration View
-extension CustomSegmentedControl {
+extension TodaySegmentedControl {
     private func updateView() {
         createButton()
         configSelectorView()
@@ -113,7 +106,7 @@ extension CustomSegmentedControl {
         for buttonTitle in buttonTitles {
             let button = UIButton(type: .system)
             button.setTitle(buttonTitle, for: .normal)
-            button.addTarget(self, action:#selector(CustomSegmentedControl.buttonAction(sender:)), for: .touchUpInside)
+            button.addTarget(self, action:#selector(TodaySegmentedControl.buttonAction(sender:)), for: .touchUpInside)
             button.setTitleColor(textColor, for: .normal)
             buttons.append(button)
         }

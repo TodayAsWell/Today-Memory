@@ -3,6 +3,7 @@ import RxSwift
 import RxCocoa
 import Then
 import SnapKit
+import TodayKit
 
 protocol StyleSelectionViewDelegate: AnyObject {
     func didSelectStyleAt(index: Int)
@@ -18,7 +19,7 @@ class StyleSelectionView: UIView {
         let segmentedControl = UISegmentedControl(items: ["커플", "단일", "식물", "사람"])
         segmentedControl.addTarget(self, action: #selector(categorySegmentedControlValueChanged), for: .valueChanged)
 
-        segmentedControl.addUnderlineForSelectedSegment()
+//        segmentedControl.addUnderlineForSelectedSegment()
         segmentedControl.apportionsSegmentWidthsByContent = true
         segmentedControl.backgroundColor = .white
         
@@ -131,7 +132,7 @@ extension StyleSelectionView: UICollectionViewDelegate, UICollectionViewDataSour
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StyleCollectionViewCell", for: indexPath) as! StyleCollectionViewCell
         
         cell.imageView.layer.borderWidth = 2
-        cell.imageView.layer.borderColor = UIColor.EAEAFC.cgColor
+        cell.imageView.layer.borderColor = TodayKitAsset.Colors.eaeafc.color.cgColor
                 
         switch indexPath.row {
         case 0:

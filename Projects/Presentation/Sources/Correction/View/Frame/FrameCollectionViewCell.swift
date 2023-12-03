@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 import Then
 import SnapKit
-import SnapKit
+import TodayKit
 
 class FrameCollectionViewCell: UICollectionViewCell {
     
@@ -66,7 +66,7 @@ class FrameCollectionViewCell: UICollectionViewCell {
     }
     private func updateSelectionStyle() {
         let borderWidth: CGFloat = isSelected ? 4 : 0
-        let borderColor: UIColor = isSelected ? .BAA7E7 : .clear
+        let borderColor: UIColor = isSelected ? TodayKitAsset.Colors.baa7E7.color : .clear
         imageView.layer.borderWidth = borderWidth
         imageView.layer.borderColor = borderColor.cgColor
     }

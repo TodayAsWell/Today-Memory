@@ -7,6 +7,7 @@ import Then
 import CoreMotion
 import AVFoundation
 import XCameraKit
+import TodayKit
 
 var takenImage = UIImage()
 
@@ -142,18 +143,18 @@ class MainCameraViewController: UIViewController, UINavigationControllerDelegate
     
     private let pictureToggleButton = UIButton().then {
         $0.setTitle("사진", for: .normal)
-        $0.setTitleColor(UIColor.White, for: .normal)
+        $0.setTitleColor(TodayKitAsset.Colors.white.color, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .bold)
-        $0.backgroundColor = .BAA7E7
+        $0.backgroundColor = TodayKitAsset.Colors.baa7E7.color
         $0.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         $0.layer.cornerRadius = 19.0
     }
     
     private let videoToggleButton = UIButton().then {
         $0.setTitle("동영상", for: .normal)
-        $0.setTitleColor(UIColor.Gray4, for: .normal)
+        $0.setTitleColor(TodayKitAsset.Colors.gray4.color, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 15.0, weight: .bold)
-        $0.backgroundColor = .White
+        $0.backgroundColor = TodayKitAsset.Colors.white.color
         $0.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
         $0.layer.cornerRadius = 19.0
     }
@@ -729,13 +730,13 @@ class MainCameraViewController: UIViewController, UINavigationControllerDelegate
         UIView.animate(withDuration: 0.3) {
             self.stackView.layoutIfNeeded()
             
-            let button1TitleColor: UIColor = self.pictureToggleButton.isSelected ? .White : .Gray4
-            let button2TitleColor: UIColor = self.videoToggleButton.isSelected ? .White : .Gray4
+            let button1TitleColor: UIColor = self.pictureToggleButton.isSelected ? TodayKitAsset.Colors.white.color : TodayKitAsset.Colors.gray4.color
+            let button2TitleColor: UIColor = self.videoToggleButton.isSelected ? TodayKitAsset.Colors.white.color : TodayKitAsset.Colors.gray4.color
             self.pictureToggleButton.setTitleColor(button1TitleColor, for: .normal)
             self.videoToggleButton.setTitleColor(button2TitleColor, for: .normal)
             
-            self.pictureToggleButton.backgroundColor = self.pictureToggleButton.isSelected ? .BAA7E7 : .White
-            self.videoToggleButton.backgroundColor = self.videoToggleButton.isSelected ? .BAA7E7 : .White
+            self.pictureToggleButton.backgroundColor = self.pictureToggleButton.isSelected ? TodayKitAsset.Colors.baa7E7.color : TodayKitAsset.Colors.white.color
+            self.videoToggleButton.backgroundColor = self.videoToggleButton.isSelected ? TodayKitAsset.Colors.baa7E7.color : TodayKitAsset.Colors.white.color
         }
     }
     

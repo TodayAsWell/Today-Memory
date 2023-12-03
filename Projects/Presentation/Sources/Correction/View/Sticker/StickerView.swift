@@ -15,7 +15,7 @@ class StickerView: UIView {
         let segmentedControl = UISegmentedControl(items: ["전체", "감정", "식물", "사람", "동물", "사물"])
         segmentedControl.addTarget(self, action: #selector(categorySegmentedControlValueChanged), for: .valueChanged)
 
-        segmentedControl.addUnderlineForSelectedSegment()
+//        segmentedControl.addUnderlineForSelectedSegment()
         segmentedControl.apportionsSegmentWidthsByContent = true
         segmentedControl.backgroundColor = .white
         
