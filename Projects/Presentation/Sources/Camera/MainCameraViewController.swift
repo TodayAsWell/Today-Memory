@@ -11,7 +11,7 @@ import TodayKit
 
 var takenImage = UIImage()
 
-class MainCameraViewController: UIViewController, UINavigationControllerDelegate {
+public class MainCameraViewController: UIViewController, UINavigationControllerDelegate {
     
     let disposeBag = DisposeBag()
     
@@ -164,7 +164,7 @@ class MainCameraViewController: UIViewController, UINavigationControllerDelegate
     }
     
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
@@ -803,7 +803,7 @@ class MainCameraViewController: UIViewController, UINavigationControllerDelegate
 }
 
 extension MainCameraViewController: UIImagePickerControllerDelegate {
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         print("이미지 선택하지않고 취소한 경우")
         
         self.dismiss(animated: false) { () in
@@ -812,7 +812,7 @@ extension MainCameraViewController: UIImagePickerControllerDelegate {
             self.present(alert, animated: false)
         }
     }
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print("이미지 선택")
         if let img = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
             picker.dismiss(animated: false) { () in
@@ -853,7 +853,7 @@ extension MainCameraViewController: StyleSelectionViewDelegate {
 
 extension MainCameraViewController: PHPickerViewControllerDelegate {
     
-    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+    public func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
         picker.dismiss(animated: true)
         
         var newSelections = [String: PHPickerResult]()

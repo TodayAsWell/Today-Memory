@@ -4,9 +4,7 @@ public extension TargetDependency {
     struct Project {}
 }
 
-public extension TargetDependency.Project {
-    static let APPNavigator = TargetDependency.project(target: "TodayNavigator", path: .relativeToRoot("Projects/Modules/TodayNavigator"))
-    
+public extension TargetDependency.Project {    
     static let Presentation = TargetDependency.project(target: "Presentation", path: .relativeToRoot("Projects/Presentation"))
     
     static let Core = TargetDependency.project(target: "Core", path: .relativeToRoot("Projects/Core"))

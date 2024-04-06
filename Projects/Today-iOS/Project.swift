@@ -7,7 +7,7 @@ let project = Project.makeModule(
     platform: .iOS,
     product: .app,
     dependencies: [
-        .Project.APPNavigator
+        .Project.Presentation
     ],
     resources: ["Resources/**"],
     infoPlist: .extendingDefault(with: Project.baseinfoPlist)
